@@ -1,0 +1,16 @@
+<h1>Sign Up</h1>
+
+
+<%= form_tag  reservations_path, method: "post" do |f| %>
+  <div class="field">
+    <%= label_tag :name %><br/>
+    <%= text_field :name %><br/>
+
+  </div>
+  <div class="field">
+    <%= label_tag :email %><br/>
+    <%= text_field :email %>
+  </div>
+
+  <div class="actions"><%= submit_tag "Submit" %></div>
+<% end %>

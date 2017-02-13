@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Seatyourself</title>
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= javascript_include_tag 'application' %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <div class = 'navbar'>
+    <h1 class = 'title'>Seatyourself</h1>
+    <div id = 'logo'>
+      <img src="http://brand.opentable.com/wp-content/uploads/2015/03/OTLogo_rationalizationhor-r1c-01.png">
+    </div>
+  </div>
+
+  <div class = 'container'>
+    <div class = 'mainbody'>
+      <%= yield %>
+    </div>
+  </div>
+
+</body>
+</html>

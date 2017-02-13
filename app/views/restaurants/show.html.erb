@@ -1,0 +1,25 @@
+
+
+<h2>Make a reservation at <%=@restaurant.name%>! </h2>
+
+<% session[:restaurant_id] = @restaurant.id %>
+<% session[:restaurant_name] = @restaurant.name %>
+
+Name:
+<%= @restaurant.name %>
+<br>
+Location:
+<%= @restaurant.location %>
+<br>
+Description:
+<%= @restaurant.description %>
+<br>
+<br>
+</div>
+
+<%= link_to "Confirm", new_reservation_path %>
+
+
+
+<%= link_to "Back to results", :back %>
+<%= link_to "New reservation search", new_search_restaurants_path %>

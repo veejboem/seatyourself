@@ -1,0 +1,33 @@
+<h1>Reservations#new</h1>
+
+<h2>Reservation Req. Details </h2>
+Restaurant: <%= session[:restaurant_name] %> <br>
+Date: <%= session[:current_res_date] %> <br>
+Time:<%= session[:current_res_time] %><br>
+Party Size:<%= session[:party_size] %><br>
+
+<%= form_for @reservation do |f| %>
+  <% if @reservation.errors.any? %>
+    <div class="error_messages">
+      <h2>Form is invalid</h2>
+      <ul>
+        <% @reservation.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+ <div class="field">
+    <%= f.label :email %><br/>
+    <%= f.text_field :email %>
+  </div>
+
+ <div class="field">
+    <%= f.label :name %><br/>
+    <%= f.text_field :name %>
+  </div>
+
+
+ <div class="actions"><%= f.submit %></div>
+<% end %>
